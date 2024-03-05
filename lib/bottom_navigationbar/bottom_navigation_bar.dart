@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:youtubeclone/core/color_constants.dart';
+import 'package:youtubeclone/view/home_screen/home_screen.dart';
 
 class BottomNavigationBarScreen extends StatefulWidget {
   const BottomNavigationBarScreen({super.key});
@@ -12,7 +13,22 @@ class BottomNavigationBarScreen extends StatefulWidget {
 }
 
 class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
-  int indexValue = 0;
+  List<Widget> screenList = [
+    HomeScreen(),
+    Container(
+      color: ColorConstants.primaryBlue,
+    ),
+    Container(
+      color: ColorConstants.primaryBlue,
+    ),
+    Container(
+      color: ColorConstants.primaryBlue,
+    ),
+    Container(
+      color: ColorConstants.primaryBlue,
+    )
+  ];
+  int indexValue = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
