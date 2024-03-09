@@ -1,16 +1,15 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:youtubeclone/core/color_constants.dart';
-
 import 'package:youtubeclone/core/constant/image_constants.dart';
 import 'package:youtubeclone/dummy_db.dart';
-import 'package:youtubeclone/view/home_screen/widgets/custom_thumbnail_widget.dart';
 
+import 'package:youtubeclone/view/home_screen/subscription_screen/widgets/subscription_avatar.dart';
+import 'package:youtubeclone/view/home_screen/widgets/custom_thumbnail_widget.dart';
 import 'package:youtubeclone/view/home_screen/widgets/home_catagory_card.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class SubscriptionScreen extends StatelessWidget {
+  const SubscriptionScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,13 +40,23 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 5),
-              decoration: BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(
-                        color: ColorConstants.primaryBlack.withOpacity(.1))),
-              ),
+            SizedBox(
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                      children: List.generate(
+                          DummydB.onlineList.length,
+                          (index) => CustomSubscriptionAvatar(
+                                proImage: DummydB.onlineList[index]["proImage"]
+                                    .toString(),
+                                channelName: DummydB.onlineList[index]
+                                        ["channelName"]
+                                    .toString(),
+                              ))),
+                )),
+            SizedBox(
+              height: 40,
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -61,6 +70,9 @@ class HomeScreen extends StatelessWidget {
                               ),
                             ))),
               ),
+            ),
+            SizedBox(
+              height: 10,
             ),
             ListView.builder(
                 physics: NeverScrollableScrollPhysics(),

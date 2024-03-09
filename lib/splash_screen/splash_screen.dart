@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:youtubeclone/bottom_navigationbar/bottom_navigation_bar.dart';
 import 'package:youtubeclone/core/constant/image_constants.dart';
-import 'package:youtubeclone/view/home_screen/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => HomeScreen(),
+            builder: (context) => BottomNavigationBarScreen(),
           ));
     });
     super.initState();

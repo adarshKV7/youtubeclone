@@ -3,6 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:youtubeclone/core/color_constants.dart';
 import 'package:youtubeclone/view/home_screen/home_screen.dart';
+import 'package:youtubeclone/view/home_screen/profile_screen/profile_screen.dart';
+import 'package:youtubeclone/view/home_screen/subscription_screen/subscription_screen.dart';
+import 'package:youtubeclone/view/shorts_screen/shorts_screen.dart';
 
 class BottomNavigationBarScreen extends StatefulWidget {
   const BottomNavigationBarScreen({super.key});
@@ -15,20 +18,14 @@ class BottomNavigationBarScreen extends StatefulWidget {
 class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
   List<Widget> screenList = [
     HomeScreen(),
+    ShortsScreen(),
     Container(
       color: ColorConstants.primaryBlue,
     ),
-    Container(
-      color: ColorConstants.primaryBlue,
-    ),
-    Container(
-      color: ColorConstants.primaryBlue,
-    ),
-    Container(
-      color: ColorConstants.primaryBlue,
-    )
+    SubscriptionScreen(),
+    ProfileScreen()
   ];
-  int indexValue = 1;
+  int indexValue = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,13 +69,15 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
             label: "Subscriptions",
           ),
           const BottomNavigationBarItem(
-              icon: Icon(
-                Icons.library_add,
-                size: 25,
+              icon: CircleAvatar(
+                backgroundImage: NetworkImage(
+                    "https://images.pexels.com/photos/598917/pexels-photo-598917.jpeg?auto=compress&cs=tinysrgb&w=600"),
+                radius: 13,
               ),
-              label: "Library"),
+              label: "You"),
         ],
       ),
+      body: screenList[indexValue],
     );
   }
 }
