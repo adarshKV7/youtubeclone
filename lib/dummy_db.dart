@@ -29,6 +29,16 @@ class DummydB {
   static const thumbLineList = [
     {
       "postImage":
+          "https://yt3.googleusercontent.com/ytc/AIdro_mtbWvrtaOJdzXFwyGd2y4zvjGVTzyyT2KeuMlBBA=s900-c-k-c0x00ffffff-no-rj",
+      "proImage": "https://i.ytimg.com/vi/mhNwaODyJbM/maxresdefault.jpg",
+      "caption":
+          "ആഴക്കടലിൽ നിന്ന് കിട്ടിയ മീനെ കണ്ടോ.. അടിപൊളി!!! Caught My Lifetime Fish",
+      "channelName": "Fishing Freaks .",
+      "views": " 1M views.",
+      "daysLeft": " 2 days"
+    },
+    {
+      "postImage":
           "https://i.ytimg.com/vi/toviHBBM3Z0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAB14k32kuv7GD_ritDdM09XD4urQ",
       "proImage":
           "https://yt3.googleusercontent.com/Ybu5mW939QWZsOAxzsf1sOqHIFKf8QwY00Rt50hBLxJBjP5INAeD2zSnUMHn1uE6vf_rGwf2Wg=s900-c-k-c0x00ffffff-no-rj",
@@ -37,16 +47,6 @@ class DummydB {
       "channelName": "M4 Tech .",
       "views": " 1.4M views",
       "daysLeft": " 3 days"
-    },
-    {
-      "postImage":
-          "https://yt3.googleusercontent.com/ytc/AIdro_mtbWvrtaOJdzXFwyGd2y4zvjGVTzyyT2KeuMlBBA=s900-c-k-c0x00ffffff-no-rj",
-      "proImage": "https://i.ytimg.com/vi/mhNwaODyJbM/maxresdefault.jpg",
-      "caption":
-          "ആഴക്കടലിൽ നിന്ന് കിട്ടിയ മീനെ കണ്ടോ.. അടിപൊളി!!! Caught My Lifetime Fish",
-      "channelName": "Fishing Freaks .",
-      "views": " 1M views.",
-      "daysLeft": " 2 days"
     },
     {
       "postImage":

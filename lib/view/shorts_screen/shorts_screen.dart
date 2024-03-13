@@ -12,33 +12,7 @@ class ShortsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          actions: [
-            Icon(
-              Icons.search,
-              size: 30,
-              color: ColorConstants.primaryWhite,
-            ),
-            SizedBox(
-              width: 20,
-            ),
-            Icon(
-              Icons.more_vert_outlined,
-              color: ColorConstants.primaryWhite,
-              size: 30,
-            )
-          ],
-          backgroundColor: Colors.transparent,
-        ),
-        extendBodyBehindAppBar: true,
-        body: ListView.builder(
-          itemCount: DummydB.reelsTab.length,
-          itemBuilder: (context, index) => ShortsCoverPage(
-              channelName: DummydB.reelsTab[index]["channelName"].toString(),
-              caption: DummydB.reelsTab[index]["caption"].toString(),
-              likeCount: DummydB.reelsTab[index]["likeCount"].toString(),
-              proPic: DummydB.reelsTab[index]["proPic"].toString(),
-              shortsImage: DummydB.reelsTab[index]["shortsImage"].toString()),
-        ));
+      body: Container(child: ShortsCoverPage()),
+    );
   }
 }

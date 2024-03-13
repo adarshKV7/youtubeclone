@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:youtubeclone/core/color_constants.dart';
+import 'package:youtubeclone/view/home_screen/widgets/selected_thumbnail.dart';
 
 class CustomThumbNailWidget extends StatelessWidget {
   const CustomThumbNailWidget(
@@ -29,11 +30,20 @@ class CustomThumbNailWidget extends StatelessWidget {
         children: [
           Column(
             children: [
-              Container(
-                height: 250,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: NetworkImage(postImage), fit: BoxFit.cover)),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SelectedThumbnailCard(),
+                      ));
+                },
+                child: Container(
+                  height: 250,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: NetworkImage(postImage), fit: BoxFit.cover)),
+                ),
               ),
               SizedBox(
                 height: 10,
