@@ -4,10 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:youtubeclone/core/color_constants.dart';
 
 class HomeCatagoryCard extends StatelessWidget {
-  const HomeCatagoryCard({
-    super.key,
-    required this.name,
-  });
+  const HomeCatagoryCard({super.key, required this.name});
 
   final String name;
 
@@ -20,11 +17,9 @@ class HomeCatagoryCard extends StatelessWidget {
       ),
       height: 40,
       width: 100,
-      child: Expanded(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [Center(child: Text(name))],
-        ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [Text(name)],
       ),
     );
   }

@@ -3,8 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:youtubeclone/core/color_constants.dart';
 
-import 'package:youtubeclone/view/home_screen/widgets/home_catagory_card.dart';
-
 class CustomSubscriptionAvatar extends StatelessWidget {
   const CustomSubscriptionAvatar({
     super.key,

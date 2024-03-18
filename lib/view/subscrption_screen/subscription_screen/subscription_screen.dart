@@ -3,9 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:youtubeclone/core/constant/image_constants.dart';
 import 'package:youtubeclone/dummy_db.dart';
+import 'package:youtubeclone/view/notification_screen/notification_screen.dart';
+import 'package:youtubeclone/view/search_screen/search_screen.dart';
 
-import 'package:youtubeclone/view/home_screen/subscription_screen/widgets/subscription_avatar.dart';
-import 'package:youtubeclone/view/home_screen/widgets/custom_thumbnail_widget.dart';
+import 'package:youtubeclone/view/subscrption_screen/subscription_screen/widgets/custom_subscription_avatar.dart';
+import 'package:youtubeclone/view/subscrption_screen/subscription_screen/widgets/thumb_nail_two.dart';
+
 import 'package:youtubeclone/view/home_screen/widgets/home_catagory_card.dart';
 
 class SubscriptionScreen extends StatelessWidget {
@@ -24,14 +27,28 @@ class SubscriptionScreen extends StatelessWidget {
           SizedBox(
             width: 15,
           ),
-          Icon(
-            Icons.notifications_none_outlined,
-            size: 24,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => NotificationScreen(),
+                  ));
+            },
+            child: Icon(
+              Icons.notifications_none_outlined,
+              size: 24,
+            ),
           ),
           SizedBox(
             width: 15,
           ),
-          Icon(Icons.search),
+          InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SearchScreen()));
+              },
+              child: Icon(Icons.search)),
           SizedBox(
             width: 15,
           ),
@@ -56,10 +73,7 @@ class SubscriptionScreen extends StatelessWidget {
                               ))),
                 )),
             SizedBox(
-              height: 10,
-            ),
-            SizedBox(
-              height: 30,
+              height: 40,
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -80,19 +94,19 @@ class SubscriptionScreen extends StatelessWidget {
             ListView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
-                itemCount: DummydB.thumbLineList.length,
-                itemBuilder: (context, index) => CustomThumbNailWidget(
+                itemCount: DummydB.thumbLineList2.length,
+                itemBuilder: (context, index) => ThumbNailTwo(
                       postImage:
-                          DummydB.thumbLineList[index]["postImage"].toString(),
+                          DummydB.thumbLineList2[index]["postImage"].toString(),
                       proPic:
-                          DummydB.thumbLineList[index]["proImage"].toString(),
+                          DummydB.thumbLineList2[index]["proImage"].toString(),
                       caption:
-                          DummydB.thumbLineList[index]["caption"].toString(),
-                      channelName: DummydB.thumbLineList[index]["channelName"]
+                          DummydB.thumbLineList2[index]["caption"].toString(),
+                      channelName: DummydB.thumbLineList2[index]["channelName"]
                           .toString(),
                       daysLeft:
-                          DummydB.thumbLineList[index]["daysLeft"].toString(),
-                      views: DummydB.thumbLineList[index]["views"].toString(),
+                          DummydB.thumbLineList2[index]["daysLeft"].toString(),
+                      views: DummydB.thumbLineList2[index]["views"].toString(),
                     ))
           ],
         ),

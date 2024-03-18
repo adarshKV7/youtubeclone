@@ -8,6 +8,8 @@ import 'package:youtubeclone/dummy_db.dart';
 import 'package:youtubeclone/view/home_screen/widgets/custom_thumbnail_widget.dart';
 
 import 'package:youtubeclone/view/home_screen/widgets/home_catagory_card.dart';
+import 'package:youtubeclone/view/notification_screen/notification_screen.dart';
+import 'package:youtubeclone/view/search_screen/search_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -25,14 +27,28 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             width: 15,
           ),
-          Icon(
-            Icons.notifications_none_outlined,
-            size: 24,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => NotificationScreen(),
+                  ));
+            },
+            child: Icon(
+              Icons.notifications_none_outlined,
+              size: 24,
+            ),
           ),
           SizedBox(
             width: 15,
           ),
-          Icon(Icons.search),
+          InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SearchScreen()));
+              },
+              child: Icon(Icons.search)),
           SizedBox(
             width: 15,
           ),

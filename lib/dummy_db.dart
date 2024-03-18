@@ -109,7 +109,7 @@ class DummydB {
     }
   ];
 
-  static const ContainerTab = [
+  static const containerTab = [
     {
       "image":
           "https://i.ytimg.com/vi/9peSOSBmeXY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBvqwKe7VTw-jzjcYoM5OHGU1yvRQ",
@@ -159,42 +159,86 @@ class DummydB {
     }
   ];
 
-  static const reelsTab = [
+  static const thumbLineList2 = [
     {
-      "likeCount": "145K",
-      "proPic":
-          "https://images.pexels.com/photos/19759188/pexels-photo-19759188/free-photo-of-bride-in-traditional-indian-jewelry.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load",
-      "channelName": "@Mallu Travaller",
-      "caption": "It is a long established fact that a reader",
-      "shortsImage":
-          "https://images.pexels.com/photos/20308702/pexels-photo-20308702/free-photo-of-a-creek-runs-through-a-forested-area-with-trees.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load",
+      "postImage":
+          "https://images.pexels.com/photos/16958033/pexels-photo-16958033/free-photo-of-smiling-family-sitting-by-table.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "proImage":
+          "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "caption":
+          "Sed ut perspiciatis unde omnis |iste natus error sit voluptatem | accusantium doloremque laudantium,",
+      "channelName": "EuroStory .",
+      "views": "2M views .",
+      "daysLeft": "3 days"
     },
     {
-      "likeCount": "3K",
-      "proPic":
-          "https://images.pexels.com/photos/20268770/pexels-photo-20268770/free-photo-of-a-woman-in-black-sitting-on-a-chair.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load",
-      "channelName": "@Munches Stories",
-      "caption": "Contrary to popular belief, Lorem Ipsum",
-      "shortsImage":
-          "https://images.pexels.com/photos/20372669/pexels-photo-20372669/free-photo-of-athens-greece.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load",
+      "postImage":
+          "https://images.pexels.com/photos/20498917/pexels-photo-20498917/free-photo-of-dragon-decoration-in-city.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "proImage":
+          "https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "caption":
+          "At vero eos et accusamus et iusto odio | dignissimos ducimus qui blanditiis| praesentium voluptatum",
+      "channelName": "TalkStories .",
+      "views": "3M views. ",
+      "daysLeft": "4 days"
+    },
+    // Repeat this pattern for the remaining entries
+    // ...
+    {
+      "postImage":
+          "https://images.pexels.com/photos/17026867/pexels-photo-17026867/free-photo-of-woman-among-people-at-gathering.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "proImage":
+          "https://images.pexels.com/photos/17021238/pexels-photo-17021238/free-photo-of-silhouette-of-pigeon-on-hand-against-sunlight.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "caption":
+          "occur that pleasures have to |be repudiated and annoyances| accepted",
+      "channelName": "CraftMedia. ",
+      "views": "10M views. ",
+      "daysLeft": "11 days"
+    },
+  ];
+
+  static const notificationTab = [
+    {
+      "image":
+          "https://images.pexels.com/photos/1556691/pexels-photo-1556691.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "text": "Contrary | simply random |text. It has roots in a piece of ",
+      "time": "11 hours ago",
+      "thumbNail":
+          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
-      "likeCount": "1M",
-      "proPic":
-          "https://images.pexels.com/photos/11828465/pexels-photo-11828465.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load",
-      "channelName": "@Karikku",
-      "caption": "There are many variations of passages",
-      "shortsImage":
-          "https://images.pexels.com/photos/18625018/pexels-photo-18625018/free-photo-of-model-sitting-and-posing-with-arms-crossed-on-beach.png?auto=compress&cs=tinysrgb&w=300&lazy=load",
+      "image":
+          "https://images.pexels.com/photos/426893/pexels-photo-426893.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "text":
+          "Lorem Internet tend | to repeat predefined |chunks as necessary, ",
+      "time": "12 hours ago",
+      "thumbNail":
+          "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
-      "likeCount": "14K",
-      "proPic":
-          "https://images.pexels.com/photos/20264899/pexels-photo-20264899/free-photo-of-a-woman-sitting-on-a-bench-next-to-the-sea.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load",
-      "channelName": "@COMIC_Media",
-      "caption": "The generated Lorem Ipsum is therefore",
-      "shortsImage":
-          "https://images.pexels.com/photos/20350979/pexels-photo-20350979/free-photo-of-a-beach-with-umbrellas-and-chairs-on-it.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load",
+      "image":
+          "https://images.pexels.com/photos/258330/pexels-photo-258330.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "text": "Sed ccusantium |totam rem aperiam,| eaque ipsa e veritatis",
+      "time": "20 hours ago",
+      "thumbNail":
+          "https://images.pexels.com/photos/268134/pexels-photo-268134.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
+    {
+      "image":
+          "https://images.pexels.com/photos/1070967/pexels-photo-1070967.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "text": "On the other righteous |indignation and dislike |men who are so",
+      "time": "1 day ago",
+      "thumbNail":
+          "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "image":
+          "https://images.pexels.com/photos/321576/pexels-photo-321576.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "text":
+          "At ver dignissimos| ducimus qui blanditiis |praesentium voluptatum",
+      "time": "2 day ago",
+      "thumbNail":
+          "https://images.pexels.com/photos/1767434/pexels-photo-1767434.jpeg?auto=compress&cs=tinysrgb&w=600"
+    }
   ];
 }

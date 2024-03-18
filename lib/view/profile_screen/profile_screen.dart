@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:youtubeclone/core/color_constants.dart';
 import 'package:youtubeclone/core/constant/image_constants.dart';
 import 'package:youtubeclone/dummy_db.dart';
-import 'package:youtubeclone/view/home_screen/profile_screen/widgets/custom_button.dart';
-import 'package:youtubeclone/view/home_screen/profile_screen/widgets/custom_containers.dart';
-import 'package:youtubeclone/view/home_screen/profile_screen/widgets/random_containers.dart';
+import 'package:youtubeclone/view/notification_screen/notification_screen.dart';
+import 'package:youtubeclone/view/profile_screen/widgets/custom_button.dart';
+import 'package:youtubeclone/view/profile_screen/widgets/custom_containers.dart';
+import 'package:youtubeclone/view/profile_screen/widgets/random_containers.dart';
+import 'package:youtubeclone/view/search_screen/search_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -24,14 +26,28 @@ class ProfileScreen extends StatelessWidget {
           SizedBox(
             width: 15,
           ),
-          Icon(
-            Icons.notifications_none_outlined,
-            size: 24,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => NotificationScreen(),
+                  ));
+            },
+            child: Icon(
+              Icons.notifications_none_outlined,
+              size: 24,
+            ),
           ),
           SizedBox(
             width: 15,
           ),
-          Icon(Icons.search),
+          InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SearchScreen()));
+              },
+              child: Icon(Icons.search)),
           SizedBox(
             width: 15,
           ),
@@ -113,14 +129,14 @@ class ProfileScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                       children: List.generate(
-                          DummydB.ContainerTab.length,
+                          DummydB.containerTab.length,
                           (index) => CustomContainers(
-                                caption: DummydB.ContainerTab[index]["caption"]
+                                caption: DummydB.containerTab[index]["caption"]
                                     .toString(),
-                                duration: DummydB.ContainerTab[index]
+                                duration: DummydB.containerTab[index]
                                         ["duration"]
                                     .toString(),
-                                image: DummydB.ContainerTab[index]["image"]
+                                image: DummydB.containerTab[index]["image"]
                                     .toString(),
                               ))),
                 ),

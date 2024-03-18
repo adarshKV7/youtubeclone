@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:youtubeclone/core/color_constants.dart';
-import 'package:youtubeclone/dummy_db.dart';
 
 class CustomContainers extends StatelessWidget {
   const CustomContainers(
@@ -19,7 +18,7 @@ class CustomContainers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Container(
+      child: SizedBox(
         height: 120,
         width: 150,
         child: Column(
